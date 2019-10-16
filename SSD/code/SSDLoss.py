@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Fri Sep 27 11:12:58 2019
-
-@author: LiXiaoGang
-"""
 from __future__ import division
 
 import numpy as np
@@ -105,4 +100,3 @@ def ssd_loss(loc,cls,grondtruth):
         loss = tf.cond(tf.equal(num_pos,0),lambda:0.0,lambda:merge_loss(pos_loss,conf_loss,num_pos))
         losses.append(loss)
     return tf.reduce_mean(losses)
-
