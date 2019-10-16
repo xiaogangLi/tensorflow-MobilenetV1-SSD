@@ -1,5 +1,5 @@
 # Object Detection
-This is an implementation of SSD for object detection in Tensorflow. It contains complete code for preprocessing, training and test. Besides, this repository is easy-to-use and can be developed on Linux and Windows.  
+This is an implementation of SSD for object detection in Tensorflow. It contains complete code for preprocessing, postprocessing, training and test. Besides, this repository is easy-to-use and can be developed on Linux and Windows.  
 
 [SSD : Liu, Wei, et al. "Ssd: Single shot multibox detector." European conference on computer vision. Springer, Cham, 2016.](https://arxiv.org/abs/1512.02325)
 
@@ -23,14 +23,14 @@ run
 Then train and val images will be generated in  `../SSD/data/annotation/train` and  `/SSD/data/annotation/test` directories, respectively.  
 
 ### 4 Generate anchors(default boxes)    
-`cd ../SSD/Code`  
+`cd ../SSD/code`  
 run  
 `python anchor_generators.py`  
 Anchors generated will be saved in the directory `../SSD/anchor/anchor.txt`.  
 
 ### 5 Train model using Tensorflow  
 The model parameters, training parameters and eval parameters are all defined by `parameters.py`.  
-`cd ../SSD/Code`  
+`cd ../SSD/code`  
 run  
 `python train.py`  
 The model will be saved in directory `../SSD/model/checkpoint`, and some detection results are saved in `../SSD/pic`. 
