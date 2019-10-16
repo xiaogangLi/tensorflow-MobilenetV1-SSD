@@ -17,7 +17,7 @@ Open the `label.txt` and revise its class names as yours.
 
 ### 3 Prepare images  
 Copy your images and annotation files to directories `../SSD/data/annotation/images` and `../SSD/data/annotation/images/xml` respectively, where the annotations should be obtained by [a graphical image annotation tool](https://github.com/tzutalin/labelImg) and  saved as XML files in PASCAL VOC format.  
-`cd ../SSD/Code`  
+`cd ../SSD/code`  
 run  
 `python spilt.py`  
 Then train and val images will be generated in  `../SSD/data/annotation/train` and  `/SSD/data/annotation/test` directories, respectively.  
