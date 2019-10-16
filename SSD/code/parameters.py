@@ -7,7 +7,7 @@ import pandas as pd
 
 
 # Training para
-BATCH_SIZE = 3
+BATCH_SIZE = 8
 LEARNING_RATE = 0.0001
 TRAIN_STEPS = 500000
 PIC_TYPE = 'jpg'             # the picture format of training images.
