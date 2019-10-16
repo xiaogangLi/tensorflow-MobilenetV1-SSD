@@ -42,7 +42,6 @@ run
 Open the URL in browser to visualize model,as follows:
 
 ![Image](https://github.com/xiaogangLi/tensorflow-MobilenetV1-SSD/blob/master/SSD/pic/graph1.bmp)
-![Image](https://github.com/xiaogangLi/tensorflow-MobilenetV1-SSD/blob/master/SSD/pic/graph2.bmp)
 
 
 ## Examples  
