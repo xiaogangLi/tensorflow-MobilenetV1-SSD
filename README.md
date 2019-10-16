@@ -45,6 +45,6 @@ Open the URL in browser to visualize model,as follows:
 Belows are three successful detection examples in my dataset:   
 
 ![Image](https://github.com/xiaogangLi/tensorflow-MobilenetV1-SSD/blob/master/SSD/pic/example1.jpg)
-![Image](https://github.com/xiaogangLi/tensorflow-MobilenetV1-SSD/blob/master/SSD/pic/example2.jpg)
 ![Image](https://github.com/xiaogangLi/tensorflow-MobilenetV1-SSD/blob/master/SSD/pic/example3.jpg)
+![Image](https://github.com/xiaogangLi/tensorflow-MobilenetV1-SSD/blob/master/SSD/pic/example2.jpg)
 
