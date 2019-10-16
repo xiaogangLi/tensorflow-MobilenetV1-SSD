@@ -1,7 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-@author: LiXiaoGang        
-"""
 from __future__ import division
 
 import os
@@ -48,8 +45,8 @@ def training_net():
                 print('Model does not exist！')
                 sys.exit()
             ckpt = tf.train.get_checkpoint_state(para.CHECKPOINT_MODEL_SAVE_PATH)
-            model = ckpt.model_checkpoint_path.split('\\')[-1]
-            Saver.restore(sess,os.path.join(para.CHECKPOINT_MODEL_SAVE_PATH,'.\\'+ model))
+            model = ckpt.model_checkpoint_path.split('/')[-1]
+            Saver.restore(sess,os.path.join(para.CHECKPOINT_MODEL_SAVE_PATH, model))
             print('Successfully restore model:',model)
         
         for i in range(para.TRAIN_STEPS):
