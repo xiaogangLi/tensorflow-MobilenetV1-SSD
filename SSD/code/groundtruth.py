@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Jul 25 13:54:39 2019
-
-@author: LiXiaoGang
-"""
 from __future__ import division
 
 import numpy as np
