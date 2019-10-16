@@ -1,11 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Fri Dec 14 10:42:44 2018
-@author: LiXiaoGang
-
-Anchor Clustering using K-Means.
-
-"""
 from __future__ import division
 
 import os
