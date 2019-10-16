@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Fri Jul 26 13:41:35 2019
-
-@author: LiXiaoGang
-"""
 from __future__ import division
 
 import os
@@ -25,9 +20,6 @@ def correct_location(x):
 
 
 def box_decode(predictions,imgname):
-    '''
-    将预测结果还原成边界框的左上角和右下角坐标，并计算类别置信度分数
-    '''
     location = np.squeeze(predictions['location'])
     confidence = np.squeeze(predictions['confidence'])
     boxes = []
@@ -65,10 +57,6 @@ def box_decode(predictions,imgname):
 
 
 def calculateIoU(xmin0,ymin0,xmax0,ymax0,xmin1,ymin1,xmax1,ymax1):
-    '''
-    计算两个边界框的iou
-    注：传递入坐标为边界框的左上角和右下角坐标，并且已经被输入图像的宽、高归一化至0~1之间
-    '''
     w = max(0.0, min(xmax0, xmax1) - max(xmin0, xmin1))
     h = max(0.0, min(ymax0, ymax1) - max(ymin0, ymin1))
     intersection = w*h
@@ -82,9 +70,6 @@ def calculateIoU(xmin0,ymin0,xmax0,ymax0,xmin1,ymin1,xmax1,ymax1):
 
 
 def nms(result,threshold):
-    '''
-    使用非极大值抑制算法(Non-maximal suppression)去除检测出来的冗余边界框
-    '''
     class_list =[]
     final_pred_boxes = []
     boxes = result['boxes']
