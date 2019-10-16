@@ -1,16 +1,10 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Sun Apr 28 19:46:04 2019
-
-@author: LiXiaoGang
-"""
 
 import numpy as np
 import parameters as para
 
 
 def onehotcode_all_classses(data):
-    
     '''
     Function: encode each class using one hot encode style.
     Args:
@@ -31,7 +25,6 @@ def onehotcode_all_classses(data):
 
 
 def onehotencode(video_name_list):
-    
     '''
     Function: encode each class using one hot encode style.
     Args:
@@ -50,7 +43,6 @@ def onehotencode(video_name_list):
 
 
 def onehotdecode(one_hot_code):
-    
     '''
     Function: decode one hot code as classess.
     Args:
