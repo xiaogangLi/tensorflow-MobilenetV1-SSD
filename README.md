@@ -39,7 +39,7 @@ The model will be saved in directory `../SSD/model/checkpoint`, and some detecti
 `cd ../SSD`  
 run  
 `tensorboard --logdir=model/`   
-Open the URL in browser to visualize model,as follows:
+Open the URL in browser to visualize graph of the model, as follows:
 
 ![Image](https://github.com/xiaogangLi/tensorflow-MobilenetV1-SSD/blob/master/SSD/pic/graph1.bmp)
 
