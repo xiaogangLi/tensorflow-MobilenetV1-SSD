@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Jul 25 10:47:42 2019
 
-@author: LiXiaoGang
-"""
 from __future__ import division
 
 import os
@@ -17,7 +13,7 @@ TRAIN_STEPS = 500000
 PIC_TYPE = 'jpg'             # the picture format of training images.
 RESTORE_MODEL = False
 
-MAX_NUM_GT = 5              # 假设每张图像中的目标不超过5个
+MAX_NUM_GT = 5              # suppose the number of objects per image is at most 5, which can be modified.
 NMS_THRESHOLD = 0.45
 
 # Mobilenetv1 para
@@ -47,8 +43,3 @@ LABELS = pd.read_csv(os.path.join(PATH,'label','label.txt'))
 NUM_CLASSESS = len(LABELS.Class_name)
 MODEL_NAME = 'model.ckpt'
 CHECKPOINT_MODEL_SAVE_PATH = os.path.join(PATH,'model','checkpoint')
-
-
-
-
-
