@@ -22,7 +22,7 @@ run
 `python spilt.py`  
 Then train and val images will be generated in  `../SSD/data/annotation/train` and  `/SSD/data/annotation/test` directories, respectively.  
 
-### 4 Generate anchors(default boxes)    
+### 4 Generate anchors (default boxes)    
 `cd ../SSD/code`  
 run  
 `python anchor_generators.py`  
@@ -48,7 +48,7 @@ Open the URL in browser to visualize graph of the model, as follows:
 
 
 ## Examples  
-Belows are three successful detection examples in my dataset:   
+Belows are some successful detection examples in my dataset:   
 
 ![Image](https://github.com/xiaogangLi/tensorflow-MobilenetV1-SSD/blob/master/SSD/pic/example1.jpg)
 ![Image](https://github.com/xiaogangLi/tensorflow-MobilenetV1-SSD/blob/master/SSD/pic/example3.jpg)
