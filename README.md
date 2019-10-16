@@ -1,7 +1,7 @@
 # Object Detection
-This is the implementation of YOLOv2 for object detection in Tensorflow. It contains complete code for preprocessing, training and test. Besides, this repository is easy-to-use and can be developed on Linux and Windows.  
+This is an implementation of SSD for object detection in Tensorflow. It contains complete code for preprocessing, training and test. Besides, this repository is easy-to-use and can be developed on Linux and Windows.  
 
-[YOLOv2 : Redmon, Joseph, and Ali Farhadi. "YOLO9000: better, faster, stronger." Proceedings of the IEEE conference on computer vision and pattern recognition. 2017.](https://arxiv.org/abs/1612.08242)
+[SSD : Liu, Wei, et al. "Ssd: Single shot multibox detector." European conference on computer vision. Springer, Cham, 2016.](https://arxiv.org/abs/1512.02325)
 
 ## Getting Started
 ### 1 Prerequisites  
@@ -12,15 +12,15 @@ This is the implementation of YOLOv2 for object detection in Tensorflow. It cont
 
 ### 2 Define your class names  
 Download  and unzip this repository.  
-`cd ../YOLOv2/label`  
+`cd ../SSD/label`  
 Open the `label.txt` and revise its class names as yours.  
 
 ### 3 Prepare images  
-Copy your images and annotation files to directories `../YOLOv2/data/annotation/images` and `../YOLOv2/data/annotation/images/xml` respectively, where the annotations should be obtained by [a graphical image annotation tool](https://github.com/tzutalin/labelImg) and  saved as XML files in PASCAL VOC format.  
-`cd ../YOLOv2/Code`  
+Copy your images and annotation files to directories `../SSD/data/annotation/images` and `../SSD/data/annotation/images/xml` respectively, where the annotations should be obtained by [a graphical image annotation tool](https://github.com/tzutalin/labelImg) and  saved as XML files in PASCAL VOC format.  
+`cd ../SSD/Code`  
 run  
 `python spilt.py`  
-Then train and val images will be generated in  `../YOLOv2/data/annotation/train` and  `/YOLOv2/data/annotation/test` directories, respectively.  
+Then train and val images will be generated in  `../SSD/data/annotation/train` and  `/SSD/data/annotation/test` directories, respectively.  
 
 ### 4 Anchor clusters using K-means  
 Run K-means clustering on the training set bounding boxes to automatically find good anchors.  
@@ -52,13 +52,13 @@ Iter = 20/20, Average IoU = 0.732539
 
 ### 5 Train model using Tensorflow  
 The model parameters, training parameters and eval parameters are all defined by `parameters.py`.  
-`cd ../YOLOv2/Code`  
+`cd ../SSD/Code`  
 run  
 `python train.py`  
-The model will be saved in directory `../YOLOv2/model/checkpoint`, and some detection results are saved in `../YOLOv2/pic`. 
+The model will be saved in directory `../SSD/model/checkpoint`, and some detection results are saved in `../SSD/pic`. 
  
 ### 6 Visualize model using Tensorboard  
-`cd ../YOLOv2`  
+`cd ../SSD`  
 run  
 `tensorboard --logdir=model/`   
 Open the URL in browser to visualize model.  
