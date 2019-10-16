@@ -26,7 +26,7 @@ Then train and val images will be generated in  `../SSD/data/annotation/train` a
 `cd ../SSD/Code`  
 run  
 `python anchor_generators.py`  
-Anchors generated will be saved the directory `../SSD/anchor/anchor.txt`.  
+Anchors generated will be saved in the directory `../SSD/anchor/anchor.txt`.  
 
 ### 5 Train model using Tensorflow  
 The model parameters, training parameters and eval parameters are all defined by `parameters.py`.  
