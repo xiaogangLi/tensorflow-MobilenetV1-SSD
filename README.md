@@ -6,7 +6,7 @@ This is an implementation of SSD for object detection in Tensorflow. It contains
 ## Getting Started
 ### 1 Prerequisites  
 * Python3  
-* Tensorflow  
+* Tensorflow 1.x   
 * Opencv-python  
 * Pandas  
 
