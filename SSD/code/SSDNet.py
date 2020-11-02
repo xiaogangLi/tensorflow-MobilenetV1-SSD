@@ -68,7 +68,7 @@ def SSDmobilenetv1(clip_X,mode):
             net6 = conv2d(net,filters=128,kernel_size=(3,3),strides=(2,2),alpha=alpha,mode=mode,name=str(8)) # Output size:1 x 1
                 
     with tf.variable_scope('ObjectDetector'):
-        with tf.variable_scope('Detetctor1'):
+        with tf.variable_scope('Detector1'):
             with tf.variable_scope('Location'):
                 filters = 4*6
                 loc1 = tf.layers.conv2d(net1,filters,kernel_size=(1,1),strides=(1,1),padding='same',activation=None,use_bias=True)
@@ -77,7 +77,7 @@ def SSDmobilenetv1(clip_X,mode):
                 filters = (para.NUM_CLASSESS)*6
                 cls1 = tf.layers.conv2d(net1,filters,kernel_size=(1,1),strides=(1,1),padding='same',activation=None,use_bias=True)
                 cls1 = tf.reshape(cls1,shape=[-1,para.FEATURE_MAPS[0][0]*para.FEATURE_MAPS[0][1]*6,(para.NUM_CLASSESS)])
-        with tf.variable_scope('Detetctor2'):
+        with tf.variable_scope('Detector2'):
             with tf.variable_scope('Location'):
                 filters = 4*6
                 loc2 = tf.layers.conv2d(net2,filters,kernel_size=(1,1),strides=(1,1),padding='same',activation=None,use_bias=True)
@@ -86,7 +86,7 @@ def SSDmobilenetv1(clip_X,mode):
                 filters = (para.NUM_CLASSESS)*6
                 cls2 = tf.layers.conv2d(net2,filters,kernel_size=(1,1),strides=(1,1),padding='same',activation=None,use_bias=True)
                 cls2 = tf.reshape(cls2,shape=[-1,para.FEATURE_MAPS[1][0]*para.FEATURE_MAPS[1][1]*6,(para.NUM_CLASSESS)])
-        with tf.variable_scope('Detetctor3'):
+        with tf.variable_scope('Detector3'):
             with tf.variable_scope('Location'):
                 filters = 4*6
                 loc3 = tf.layers.conv2d(net3,filters,kernel_size=(1,1),strides=(1,1),padding='same',activation=None,use_bias=True)
@@ -95,7 +95,7 @@ def SSDmobilenetv1(clip_X,mode):
                 filters = (para.NUM_CLASSESS)*6
                 cls3 = tf.layers.conv2d(net3,filters,kernel_size=(1,1),strides=(1,1),padding='same',activation=None,use_bias=True)
                 cls3 = tf.reshape(cls3,shape=[-1,para.FEATURE_MAPS[2][0]*para.FEATURE_MAPS[2][1]*6,(para.NUM_CLASSESS)])
-        with tf.variable_scope('Detetctor4'):
+        with tf.variable_scope('Detector4'):
             with tf.variable_scope('Location'):
                 filters = 4*6
                 loc4 = tf.layers.conv2d(net4,filters,kernel_size=(1,1),strides=(1,1),padding='same',activation=None,use_bias=True)
@@ -104,7 +104,7 @@ def SSDmobilenetv1(clip_X,mode):
                 filters = (para.NUM_CLASSESS)*6
                 cls4 = tf.layers.conv2d(net4,filters,kernel_size=(1,1),strides=(1,1),padding='same',activation=None,use_bias=True)
                 cls4 = tf.reshape(cls4,shape=[-1,para.FEATURE_MAPS[3][0]*para.FEATURE_MAPS[3][1]*6,(para.NUM_CLASSESS)])
-        with tf.variable_scope('Detetctor5'):
+        with tf.variable_scope('Detector5'):
             with tf.variable_scope('Location'):
                 filters = 4*6
                 loc5 = tf.layers.conv2d(net5,filters,kernel_size=(1,1),strides=(1,1),padding='same',activation=None,use_bias=True)
@@ -113,7 +113,7 @@ def SSDmobilenetv1(clip_X,mode):
                 filters = (para.NUM_CLASSESS)*6
                 cls5 = tf.layers.conv2d(net5,filters,kernel_size=(1,1),strides=(1,1),padding='same',activation=None,use_bias=True)
                 cls5 = tf.reshape(cls5,shape=[-1,para.FEATURE_MAPS[4][0]*para.FEATURE_MAPS[4][1]*6,(para.NUM_CLASSESS)])
-        with tf.variable_scope('Detetctor6'):
+        with tf.variable_scope('Detector6'):
             with tf.variable_scope('Location'):
                 filters = 4*5
                 loc6 = tf.layers.conv2d(net6,filters,kernel_size=(1,1),strides=(1,1),padding='same',activation=None,use_bias=True)
